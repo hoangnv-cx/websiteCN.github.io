@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+      "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+      "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- web -->
+	<definition name="base.definition.web" template="decorators/web.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/common/web/header.jsp" />
+		<put-attribute name="menu" value="/common/web/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/common/web/footer.jsp" />
+		<put-attribute name="script" value="" />
+	</definition>
+	<!-- Trang chủ -->
+	<definition name="homeWeb" extends="base.definition.web">
+		<put-attribute name="title" value="Trang chủ" />
+		<put-attribute name="body" value="/WEB-INF/views/web/homeWeb.jsp" />
+		<put-attribute name="script" value="/common/PagingScript.jsp" />
+	</definition>
+	<!-- Bài viết -->
+	<definition name="itemNew" extends="base.definition.web">
+		<put-attribute name="title" value="Bài viết" />
+		<put-attribute name="body" value="/WEB-INF/views/web/item/itemNew.jsp" />
+	</definition>
+	<!--  Thể loại -->
+	<definition name="category" extends="base.definition.web">
+		<put-attribute name="title" value="Thể Loại" />
+		<put-attribute name="body" value="/WEB-INF/views/web/item/Category.jsp" />
+		<put-attribute name="script" value="/common/PagingScript.jsp" />
+	</definition>
+	<!--  Thể loại -->
+	<definition name="about" extends="base.definition.web">
+		<put-attribute name="title" value="Thông tin" />
+		<put-attribute name="body" value="/WEB-INF/views/web/item/about.jsp" />
+	</definition>
+	<!--  Trợ giúp -->
+	<definition name="help" extends="base.definition.web">
+		<put-attribute name="title" value="Trợ giúp" />
+		<put-attribute name="body" value="/WEB-INF/views/web/item/help.jsp" />
+	</definition>
+	<!--  Tài khoản -->
+	<definition name="user" extends="base.definition.web">
+		<put-attribute name="title" value="Tài Khoản" />
+		<put-attribute name="body" value="/WEB-INF/views/web/item/user.jsp" />
+	</definition>
+	<!--  Tìm kiếm -->
+	<definition name="search" extends="base.definition.web">
+		<put-attribute name="title" value="Tìm kiếm" />
+		<put-attribute name="body" value="/WEB-INF/views/web/item/search.jsp" />
+	</definition>
+
+	<!--  End web -->
+	<!-- admin -->
+	<definition name="base.definition.admin" template="decorators/admin.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/common/admin/header.jsp" />
+		<put-attribute name="menu" value="/common/admin/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/common/admin/footer.jsp" />
+		<put-attribute name="script" value="" />
+	</definition>
+	<!-- HOME -->
+	<definition name="homeAdmin" extends="base.definition.admin">
+		<put-attribute name="title" value="Trang Quản lí" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/homeAdmin.jsp" />
+	</definition>
+	<!-- USER list-->
+	<definition name="adminListUser" extends="base.definition.admin">
+		<put-attribute name="title" value="Quản lí tài khoản" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/user/ListUser.jsp" />
+	</definition>
+	<!-- USER edit-->
+	<definition name="adminEditUser" extends="base.definition.admin">
+		<put-attribute name="title" value="Chỉnh sửa tài khoản" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/user/EditUser.jsp" />
+	</definition>
+	<!-- USER add-->
+	<definition name="adminAddUser" extends="base.definition.admin">
+		<put-attribute name="title" value="Thêm tài khoản" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/user/AddUser.jsp" />
+	</definition>
+	<!-- USER detail-->
+	<definition name="adminDetailUser" extends="base.definition.admin">
+		<put-attribute name="title" value="Chi tiết tài khoản" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/user/DetailUser.jsp" />
+	</definition>
+	<!-- NEW list-->
+	<definition name="adminListNew" extends="base.definition.admin">
+		<put-attribute name="title" value="Quản lí bài viết" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/new/ListNew.jsp" />
+		<put-attribute name="script" value="/common/script/ScriptListNew.jsp" />
+	</definition>
+	<!-- NEW edit-->
+	<definition name="adminEditNew" extends="base.definition.admin">
+		<put-attribute name="title" value="Chỉnh sửa bài viết" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/new/EditNew.jsp" />
+		<put-attribute name="script" value="/common/script/ScriptEditNew.jsp" />
+	</definition>
+	<!-- NEW detail-->
+	<definition name="adminDetailNew" extends="base.definition.admin">
+		<put-attribute name="title" value="Chỉnh sửa bài viết" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/new/DetailNew.jsp" />
+	</definition>
+	<!-- HELP list-->
+	<definition name="helpList" extends="base.definition.admin">
+		<put-attribute name="title" value="Quản lí trợ giúp" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/help/helpAdmin.jsp" />
+	</definition>
+	<!-- HELP edit-->
+	<definition name="helpEdit" extends="base.definition.admin">
+		<put-attribute name="title" value="Chỉnh sửa trợ giúp" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/help/editHelp.jsp" />
+	</definition>
+	<!-- HELP detail-->
+	<definition name="helpDetail" extends="base.definition.admin">
+		<put-attribute name="title" value="Chi tiết trợ giúp" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/help/DetailHelp.jsp" />
+	</definition>
+	<!-- COMMENT list -->
+	<definition name="commentList" extends="base.definition.admin">
+		<put-attribute name="title" value="Quản lí bình luận" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/comment/listComment.jsp" />
+	</definition>
+	<!-- COMMENT detail-->
+	<definition name="commentDetail" extends="base.definition.admin">
+		<put-attribute name="title" value="Chi tiết bình luận" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/comment/DetailComment.jsp" />
+	</definition>
+	<!-- End Admin-->
+	<!-- login -->
+	<definition name="login" template="decorators/login.jsp">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+	</definition>
+	<!-- <definition name="login" template="/WEB-INF/views/login.jsp"> </definition> -->
+	<!-- signin -->
+	<definition name="signin" template="decorators/login.jsp">
+		<put-attribute name="title" value="Signin" />
+		<put-attribute name="body" value="/WEB-INF/views/signin.jsp" />
+	</definition>
+	<!-- Error-->
+	<definition name="Error" template="decorators/login.jsp">
+		<put-attribute name="title" value="Error" />
+		<put-attribute name="body" value="/WEB-INF/views/Error.jsp" />
+	</definition>
+</tiles-definitions>
